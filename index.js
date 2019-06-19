@@ -103,8 +103,13 @@ async function build (args, api, options) {
       }
 
       const pkg = require(api.resolve('./package.json'))
-      await fs.writeFile(`${targetDir}/package.json`,
-        `{"name":"${pkg.name}","version":"${pkg.version}","main":"main.electron.js"}`)
+      await fs.writeFile(`${targetDir}/package.json`, `{
+  "name": "${pkg.name}",
+  "version": "${pkg.version}",
+  "productName": "${pkg.productName || pkg.name}",
+  "author": "${pkg.author || pkg.name}",
+  "main": "main.electron.js"
+}`)
 
       if (!args.silent) {
         const targetDirShort = path.relative(
