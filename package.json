@@ -1,6 +1,6 @@
 {
   "name": "@firetrust/vue-cli-plugin-electron",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "electron plugin for vue-cli",
   "main": "index.js",
   "scripts": {
