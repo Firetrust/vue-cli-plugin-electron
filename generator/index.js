@@ -9,7 +9,7 @@ module.exports = api => {
       publicPath: ''
     },
     devDependencies: {
-      electron: '^5.0.2'
+      electron: '^6.0.0'
     }
   })
 }
